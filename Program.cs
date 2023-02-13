@@ -1,15 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+// Not sure how this is possible when all of the variables are local to the first if statement so I changed it a bit.
 // ask for input
-Console.WriteLine("Enter 1 to create data file.");
-Console.WriteLine("Enter 2 to parse data.");
-Console.WriteLine("Enter anything else to quit.");
-// input response
-string? resp = Console.ReadLine();
-
-if (resp == "1")
-{
-    // create data file
+// create data file
 
     // ask a question
     Console.WriteLine("How many weeks of data is needed?");
@@ -27,6 +19,14 @@ if (resp == "1")
     // create file
     StreamWriter sw = new StreamWriter("data.txt");
 
+Console.WriteLine("Enter 1 to create data file.");
+Console.WriteLine("Enter 2 to parse data.");
+Console.WriteLine("Enter anything else to quit.");
+// input response
+string? resp = Console.ReadLine();
+
+if (resp == "1")
+{
     // loop for the desired # of weeks
     while (dataDate < dataEndDate)
     {
@@ -49,5 +49,5 @@ if (resp == "1")
 else if (resp == "2")
 {
     // TODO: parse data file
-
+    //Console.WriteLine($"Week of {dataDate:MMM}");
 }
