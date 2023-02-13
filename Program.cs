@@ -49,5 +49,14 @@ if (resp == "1")
 else if (resp == "2")
 {
     // TODO: parse data file
-    //Console.WriteLine($"Week of {dataDate:MMM}");
+    while (dataDate < dataEndDate)
+    {
+        Console.WriteLine($"Week of {today:MMM}, {today:dd}, {today:yyyy}");
+        // It would be more work to use string interpolation here.
+        Console.WriteLine("Su Mo Tu We Th Fr Sa");
+        Console.WriteLine("-- -- -- -- -- -- --");
+        dataDate = dataDate.AddDays(7);
+        today = today.AddDays(7);
+    }
+    
 }
